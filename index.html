@@ -1,0 +1,1694 @@
+            </div>
+            
+            <div id="installation" class="section">
+                <h2>Installation & Setup Guide</h2>
+                
+                <h3>Pre-Installation Checklist</h3>
+                <div class="step-box">
+                    <p><strong>System Verification:</strong> Confirm your computer meets minimum requirements before proceeding.</p>
+                    <ul>
+                        <li>Operating System: Windows 10 Pro/Enterprise (64-bit) or Windows 11</li>
+                        <li>Processor: Intel Core i5 or AMD equivalent (i7/i9 recommended for large projects)</li>
+                        <li>RAM: 8GB minimum (16GB+ for projects with 5,000+ activities)</li>
+                        <li>Hard Disk: 10GB free space for application, additional for database</li>
+                        <li>Display: 1280x1024 minimum (1920x1080 or dual monitors recommended)</li>
+                        <li>Network: Stable connection for enterprise database access</li>
+                    </ul>
+                </div>
+                
+                <h3>Database Options</h3>
+                <table>
+                    <tr>
+                        <th>Database Type</th>
+                        <th>Use Case</th>
+                        <th>Capacity</th>
+                    </tr>
+                    <tr>
+                        <td>SQLite (Local)</td>
+                        <td>Single user, training, small projects</td>
+                        <td>Up to 100,000 activities</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft SQL Server</td>
+                        <td>Enterprise, multi-user, medium to large portfolios</td>
+                        <td>Unlimited with proper tuning</td>
+                    </tr>
+                    <tr>
+                        <td>Oracle Database</td>
+                        <td>Large enterprise, global teams, mission-critical</td>
+                        <td>Unlimited, highest performance</td>
+                    </tr>
+                </table>
+                
+                <h3>Step-by-Step Installation</h3>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Obtain Installation Files:</strong></p>
+                    <ul>
+                        <li>Download from Oracle eDelivery or company license portal</li>
+                        <li>Verify file integrity with provided checksum</li>
+                        <li>Ensure you have valid license key or activation credentials</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Run Installer as Administrator:</strong></p>
+                    <ul>
+                        <li>Right-click setup.exe → "Run as administrator"</li>
+                        <li>Click "Yes" on User Account Control prompt</li>
+                        <li>Wait for installer initialization (1-2 minutes)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>Choose Installation Type:</strong></p>
+                    <ul>
+                        <li><strong>Typical:</strong> Standard installation with common features (recommended for most users)</li>
+                        <li><strong>Custom:</strong> Select specific components (for advanced users or limited disk space)</li>
+                        <li><strong>Complete:</strong> All features including optional modules</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Select Installation Directory:</strong></p>
+                    <ul>
+                        <li>Default: C:\Program Files\Oracle\Primavera P6</li>
+                        <li>Change if installing on different drive (ensure adequate space)</li>
+                        <li>Avoid paths with special characters or spaces in network locations</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Database Configuration:</strong></p>
+                    <ul>
+                        <li><strong>For Local/SQLite:</strong> Select "Private" and choose database location</li>
+                        <li><strong>For Enterprise Database:</strong> Enter server name, database name, port number</li>
+                        <li>Input database username and password (provided by DBA)</li>
+                        <li>Test connection before proceeding</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">6</span><strong>License Activation:</strong></p>
+                    <ul>
+                        <li>Enter license key when prompted</li>
+                        <li>For network licenses, specify license server address</li>
+                        <li>Verify activation status shows "Licensed"</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">7</span><strong>Complete Installation:</strong></p>
+                    <ul>
+                        <li>Review summary of selected options</li>
+                        <li>Click "Install" and wait for file copy (5-15 minutes)</li>
+                        <li>Do not interrupt or power off during installation</li>
+                        <li>Click "Finish" when complete</li>
+                    </ul>
+                </div>
+                
+                <h3>Post-Installation Configuration</h3>
+                
+                <div class="step-box">
+                    <p><span class="step-number">8</span><strong>First Launch Setup:</strong></p>
+                    <ul>
+                        <li>Launch P6 from desktop shortcut or Start menu</li>
+                        <li>Login with credentials (default admin user or company account)</li>
+                        <li>Configure user preferences: Edit → User Preferences</li>
+                        <li>Set default duration type (days/hours), time units, currency</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">9</span><strong>Enterprise Setup (Admin Tasks):</strong></p>
+                    <ul>
+                        <li>Create Enterprise Project Structure (EPS) nodes</li>
+                        <li>Define organizational breakdown structure (OBS)</li>
+                        <li>Set up global calendars for different locations/disciplines</li>
+                        <li>Create resource library with standard roles and equipment</li>
+                        <li>Configure activity codes for reporting dimensions</li>
+                        <li>Establish user security profiles and access rights</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <strong>⚠️ Common Installation Issues:</strong>
+                    <ul>
+                        <li><strong>Database connection fails:</strong> Verify firewall rules allow P6 port access (typically 1521 for Oracle, 1433 for SQL Server)</li>
+                        <li><strong>License not recognized:</strong> Check system date/time is accurate and synchronized</li>
+                        <li><strong>Slow performance:</strong> Disable antivirus real-time scanning for P6 installation folder</li>
+                        <li><strong>Missing DLL errors:</strong> Install latest Microsoft Visual C++ Redistributables</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Best Practice:</strong> For oil & gas enterprises, use dedicated database server (not workstation-hosted) to ensure 24/7 availability and proper backup/disaster recovery procedures.
+                </div>
+                
+                <h3>Network Deployment Considerations</h3>
+                <p>For multi-site oil & gas operations deploying to 50+ users:</p>
+                <ul>
+                    <li>Use centralized deployment tools (SCCM, Group Policy) for consistent installation</li>
+                    <li>Configure connection profiles to point to regional database replicas</li>
+                    <li>Implement load balancing for P6 Web Access if using browser-based interface</li>
+                    <li>Set up VPN/secure remote access for offshore/field personnel</li>
+                    <li>Schedule database maintenance windows during low-usage periods</li>
+                    <li>Plan for disaster recovery with geo-redundant database backups</li>
+                </ul>
+            </div>
+            
+            <div id="ui-navigation" class="section">
+                <h2>User Interface Navigation</h2>
+                
+                <h3>Understanding the P6 Interface</h3>
+                <p>Primavera P6's interface is designed for managing complex project portfolios. Mastering navigation is essential for efficient scheduling.</p>
+                
+                <h3>Main Interface Components</h3>
+                
+                <div class="step-box">
+                    <h3>1. Menu Bar (Top)</h3>
+                    <p>Primary access to all P6 functions organized by category:</p>
+                    <ul>
+                        <li><strong>File:</strong> New, Open, Close, Save, Print, Export/Import</li>
+                        <li><strong>Edit:</strong> Undo, Redo, Cut, Copy, Paste, Find, User Preferences</li>
+                        <li><strong>View:</strong> Layouts, Filters, Group/Sort, Columns, Timescale settings</li>
+                        <li><strong>Project:</strong> Project details, WBS, Calendars, Activity Codes, Resources</li>
+                        <li><strong>Enterprise:</strong> EPS, Global Calendars, Resources, Roles, Code Libraries</li>
+                        <li><strong>Tools:</strong> Schedule, Level Resources, Assign Baselines, Global Change, Options</li>
+                        <li><strong>Admin:</strong> User administration, Security, Database management</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>2. Toolbar (Below Menu)</h3>
+                    <p>Quick-access buttons for frequently used commands:</p>
+                    <ul>
+                        <li>New Project, Open, Save icons</li>
+                        <li>Print, Print Preview</li>
+                        <li>Cut, Copy, Paste</li>
+                        <li>Undo/Redo arrows</li>
+                        <li>Schedule (F9) button - one of most important!</li>
+                        <li>Filter dropdown</li>
+                        <li>Zoom in/out for Gantt timescale</li>
+                    </ul>
+                    <p><em>Tip: Right-click toolbar to customize and add your most-used functions</em></p>
+                </div>
+                
+                <div class="step-box">
+                    <h3>3. Directory Panel (Left Side)</h3>
+                    <p>Hierarchical navigation tree showing:</p>
+                    <ul>
+                        <li><strong>Enterprise Project Structure (EPS):</strong> Portfolio organization</li>
+                        <li><strong>Projects:</strong> Individual projects within each EPS node</li>
+                        <li><strong>Work Breakdown Structure (WBS):</strong> Project phases and deliverables</li>
+                    </ul>
+                    <p>Click triangle icons to expand/collapse nodes. Right-click for context menus to add, modify, or delete items.</p>
+                </div>
+                
+                <div class="step-box">
+                    <h3>4. Bottom Tabs</h3>
+                    <p>Switch between different data views:</p>
+                    <ul>
+                        <li><strong>WBS:</strong> Work breakdown structure with budget, progress rollups</li>
+                        <li><strong>Activities:</strong> Detailed activity table with all scheduling data</li>
+                        <li><strong>Resources:</strong> Resource library and assignments</li>
+                        <li><strong>Assignments:</strong> Which resources assigned to which activities</li>
+                        <li><strong>Relationships:</strong> Logic links between activities</li>
+                        <li><strong>Tracking:</strong> Progress updates and actuals entry</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>5. Activity Table (Center)</h3>
+                    <p>Spreadsheet-style grid displaying activity data:</p>
+                    <ul>
+                        <li>Each row represents one activity</li>
+                        <li>Columns show fields: Activity ID, Name, Duration, Start/Finish dates, etc.</li>
+                        <li>Click column headers to sort ascending/descending</li>
+                        <li>Right-click header to add/remove columns</li>
+                        <li>Drag column borders to resize width</li>
+                        <li>Double-click activity row to open detailed Activity form</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>6. Gantt Chart (Right Side)</h3>
+                    <p>Visual timeline representation:</p>
+                    <ul>
+                        <li>Horizontal bars show activity duration on calendar</li>
+                        <li>Red bars = Critical Path activities (zero float)</li>
+                        <li>Blue bars = Non-critical activities (positive float)</li>
+                        <li>Arrows = Relationships/dependencies between activities</li>
+                        <li>Diamonds = Milestones (zero-duration activities)</li>
+                        <li>Vertical today date line shows current status</li>
+                    </ul>
+                    <p>Timescale at top shows days, weeks, months. Use zoom buttons to adjust detail level.</p>
+                </div>
+                
+                <h3>Navigation Techniques</h3>
+                
+                <div class="step-box">
+                    <h3>Selecting Activities</h3>
+                    <ul>
+                        <li><strong>Single select:</strong> Click on activity row</li>
+                        <li><strong>Multi-select (non-contiguous):</strong> Hold Ctrl + click each activity</li>
+                        <li><strong>Range select:</strong> Click first activity, hold Shift, click last activity</li>
+                        <li><strong>Select all:</strong> Ctrl+A</li>
+                        <li><strong>Deselect:</strong> Click on blank area or press Esc</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Filtering Data</h3>
+                    <ul>
+                        <li>Click Filter dropdown in toolbar → Select predefined filter</li>
+                        <li>View → Filters → Show All Filters to see complete list</li>
+                        <li>Create custom: View → Filters → New to define criteria</li>
+                        <li>Quick filter: Click column header → Auto Filter icon → Check values to display</li>
+                        <li>Clear filter: Select "All Activities" from filter dropdown</li>
+                    </ul>
+                    <p><em>Common filters for oil & gas: Critical Activities, In Progress, This Month, By Discipline</em></p>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Grouping & Organizing</h3>
+                    <ul>
+                        <li>View → Group and Sort By → Select grouping field (WBS, Activity Code, etc.)</li>
+                        <li>Activities organize into collapsible sections</li>
+                        <li>Click + / - symbols to expand/collapse groups</li>
+                        <li>Multiple level grouping: Add secondary and tertiary sort fields</li>
+                        <li>Useful for reporting by discipline, area, contractor package</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Customizing Columns</h3>
+                    <ul>
+                        <li>Right-click any column header → Columns</li>
+                        <li>Check boxes to show/hide specific fields</li>
+                        <li>Drag columns left/right to reorder</li>
+                        <li>Click + drag column border to resize width</li>
+                        <li>Double-click column divider for auto-fit to content</li>
+                        <li>Save custom column sets: View → Layouts → Save Layout As</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Timescale Adjustment</h3>
+                    <ul>
+                        <li>Use Zoom In/Out buttons to change detail (hours to years)</li>
+                        <li>Scroll Gantt horizontally using bottom scrollbar</li>
+                        <li>Ctrl + G = "Go to Date" to jump to specific calendar date</li>
+                        <li>Right-click timescale → Timescale to customize date formats and intervals</li>
+                        <li>Click "Today" button to center view on current date</li>
+                    </ul>
+                </div>
+                
+                <h3>Layouts: Saving Your Workspace</h3>
+                <p>Layouts preserve your entire workspace configuration including columns, grouping, filters, and Gantt settings.</p>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Create Layout:</strong> Configure view exactly as desired</p>
+                    <p><span class="step-number">2</span><strong>Save:</strong> View → Layouts → Save Layout As → Enter name</p>
+                    <p><span class="step-number">3</span><strong>Recall:</strong> View → Layouts → Select saved layout name</p>
+                </div>
+                
+                <p><strong>Recommended Layouts for Oil & Gas:</strong></p>
+                <ul>
+                    <li><strong>Executive Summary:</strong> High-level milestones, grouped by phase, monthly timescale</li>
+                    <li><strong>Construction Detail:</strong> All activities, grouped by area, show resources, weekly timescale</li>
+                    <li><strong>Critical Path Focus:</strong> Filter to critical only, show float, constraints, successors</li>
+                    <li><strong>Progress Update:</strong> Show actual dates, percent complete, remaining duration columns</li>
+                    <li><strong>Resource Loading:</strong> Group by resource, show assigned units, cost columns</li>
+                </ul>
+                
+                <div class="tip">
+                    <strong>💡 Power User Tip:</strong> Create role-based layouts. Planners need detailed logic view. Managers need summary Gantt. Field supervisors need 3-week look-ahead filtered to their area.
+                </div>
+                
+                <h3>Context Menus (Right-Click)</h3>
+                <p>Right-clicking different areas reveals contextual options:</p>
+                <ul>
+                    <li><strong>Activity row:</strong> Activity Details, Delete, Assign Resources, Add Relationships, etc.</li>
+                    <li><strong>Gantt bar:</strong> Activity Details, Zoom to Activity, Trace Logic</li>
+                    <li><strong>Column header:</strong> Columns, Sort, Auto Filter</li>
+                    <li><strong>Directory tree:</strong> Add, Modify, Delete nodes</li>
+                    <li><strong>Blank space:</strong> Add Activity, Paste, Refresh</li>
+                </ul>
+                
+                <div class="warning">
+                    <strong>⚠️ Navigation Gotcha:</strong> Changes to activity data don't automatically recalculate dates. Always press F9 (Schedule) after modifications to see updated timeline!
+                </div>
+            </div>
+            
+            <div id="project-creation" class="section">
+                <h2>Project Creation Procedure</h2>
+                
+                <h3>Overview</h3>
+                <p>Creating a project in P6 involves more than just clicking "New." Proper setup ensures accurate scheduling, meaningful reporting, and alignment with enterprise standards.</p>
+                
+                <h3>Pre-Creation Planning</h3>
+                <div class="step-box">
+                    <p><strong>Before creating project, gather:</strong></p>
+                    <ul>
+                        <li>Project scope document and execution strategy</li>
+                        <li>Contract breakdown and responsible parties</li>
+                        <li>Target start and completion dates</li>
+                        <li>Budget and resource availability</li>
+                        <li>Organizational structure and reporting requirements</li>
+                        <li>Coding standards and naming conventions</li>
+                    </ul>
+                </div>
+                
+                <h3>Enterprise Project Structure (EPS)</h3>
+                <p>EPS is the top-level organizational hierarchy containing all projects. It typically mirrors company structure or strategic groupings.</p>
+                
+                <div class="step-box">
+                    <h3>Creating EPS Nodes (Admin Only)</h3>
+                    <p><span class="step-number">1</span><strong>Access EPS:</strong> Enterprise → Enterprise Project Structure</p>
+                    <p><span class="step-number">2</span><strong>Add Node:</strong> Right-click parent → Add</p>
+                    <p><span class="step-number">3</span><strong>Enter Details:</strong></p>
+                    <ul>
+                        <li>EPS ID: Unique identifier (e.g., "OG-UPSTREAM")</li>
+                        <li>EPS Name: Descriptive name (e.g., "Oil & Gas - Upstream Projects")</li>
+                        <li>Responsible Manager: Assign OBS manager</li>
+                    </ul>
+                    <p><span class="step-number">4</span><strong>Create Hierarchy:</strong> Build tree structure matching portfolio organization</p>
+                </div>
+                
+                <p><strong>Example EPS for Oil & Gas Company:</strong></p>
+                <ul>
+                    <li>Company Portfolio
+                        <ul>
+                            <li>Upstream Projects
+                                <ul>
+                                    <li>Offshore Platforms</li>
+                                    <li>Onshore Drilling</li>
+                                    <li>Subsea Infrastructure</li>
+                                </ul>
+                            </li>
+                            <li>Midstream Projects
+                                <ul>
+                                    <li>Pipelines</li>
+                                    <li>Compression Stations</li>
+                                    <li>Storage Facilities</li>
+                                </ul>
+                            </li>
+                            <li>Downstream Projects
+                                <ul>
+                                    <li>Refineries</li>
+                                    <li>Petrochemical Plants</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Creating a New Project</h3>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Initiate Creation:</strong></p>
+                    <ul>
+                        <li>File → New → Project</li>
+                        <li>Or right-click EPS node → Add Project</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>General Tab - Basic Information:</strong></p>
+                    <ul>
+                        <li><strong>Project ID:</strong> Unique code (e.g., "PLT-2026-001" for Platform Project 2026 #1)
+                            <ul>
+                                <li>Follow company standards: PREFIX-YEAR-SEQUENCE</li>
+                                <li>Max 20 characters, no spaces or special characters</li>
+                            </ul>
+                        </li>
+                        <li><strong>Project Name:</strong> Descriptive title (e.g., "North Sea Platform Delta - Engineering & Construction")</li>
+                        <li><strong>Planned Start:</strong> Project kick-off date</li>
+                        <li><strong>Must Finish By:</strong> Contractual completion date (optional but recommended)</li>
+                        <li><strong>Responsible Manager:</strong> Select from OBS (organizational breakdown structure)</li>
+                        <li><strong>Status:</strong> What-If, Active, or Inactive (typically Active for live projects)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>Dates Tab - Schedule Parameters:</strong></p>
+                    <ul>
+                        <li><strong>Default Calendar:</strong> Select project-wide work calendar
+                            <ul>
+                                <li>For offshore: 7-day continuous calendar</li>
+                                <li>For onshore: 5-day or 6-day calendar</li>
+                                <li>Can override at activity level later</li>
+                            </ul>
+                        </li>
+                        <li><strong>Data Date:</strong> Status date for progress tracking (usually current date or last update)</li>
+                        <li><strong>Last Recalculated:</strong> Auto-populated after first schedule</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Defaults Tab - Activity Settings:</strong></p>
+                    <ul>
+                        <li><strong>Default Duration Type:</strong> Fixed Duration & Units (most common for oil & gas)</li>
+                        <li><strong>Activity Type:</strong> Task Dependent (standard for CPM scheduling)</li>
+                        <li><strong>Percent Complete Type:</strong> Duration or Physical (Physical for EVM compliance)</li>
+                        <li><strong>Activity ID Increment:</strong> Auto-increment value (e.g., 10 allows inserting activities between)</li>
+                        <li><strong>Activity ID Prefix:</strong> Auto-prefix for new activities (optional)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Calculations Tab - Scheduling Logic:</strong></p>
+                    <ul>
+                        <li><strong>Critical Path:</strong> Total Float ≤ 0 (standard)</li>
+                        <li><strong>Compute Total Float:</strong> Finish date minus project must-finish date</li>
+                        <li><strong>Longest Path:</strong> Enable to identify driving path</li>
+                        <li><strong>Make Open-Ended Activities Critical:</strong> Yes (catches missing logic)</li>
+                        <li><strong>Use Expected Finish Dates:</strong> Optionally account for constraints</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">6</span><strong>Codes and Categories:</strong></p>
+                    <ul>
+                        <li>Assign Project Codes for portfolio grouping (Region, Contract Type, Phase)</li>
+                        <li>These enable filtering and reporting across multiple projects</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">7</span><strong>Review and Create:</strong></p>
+                    <ul>
+                        <li>Verify all required fields completed</li>
+                        <li>Click OK to create project</li>
+                        <li>Project appears under selected EPS node</li>
+                    </ul>
+                </div>
+                
+                <h3>Post-Creation Setup</h3>
+                
+                <div class="step-box">
+                    <h3>Define Project-Specific Settings</h3>
+                    <p><span class="step-number">1</span><strong>Assign Project Calendars:</strong></p>
+                    <ul>
+                        <li>Project → Project Calendars → Assign global or create custom</li>
+                        <li>Define calendars for different work locations/crews</li>
+                    </ul>
+                    
+                    <p><span class="step-number">2</span><strong>Set Up Activity Codes:</strong></p>
+                    <ul>
+                        <li>Project → Activity Codes → Assign existing or create project-specific codes</li>
+                        <li>Essential codes: Discipline, Area, Phase, Contractor</li>
+                    </ul>
+                    
+                    <p><span class="step-number">3</span><strong>Configure WBS:</strong></p>
+                    <ul>
+                        <li>Click WBS tab → Right-click project → Add WBS elements</li>
+                        <li>Build hierarchy matching work packages and deliverables</li>
+                        <li>Assign WBS responsible managers and budgets</li>
+                    </ul>
+                    
+                    <p><span class="step-number">4</span><strong>Assign Resources:</strong></p>
+                    <ul>
+                        <li>Project → Assign Resources → Select from enterprise library</li>
+                        <li>Or create project-specific resources if not using shared pool</li>
+                    </ul>
+                    
+                    <p><span class="step-number">5</span><strong>Define User-Defined Fields (UDF):</strong></p>
+                    <ul>
+                        <li>Admin → User Defined Fields → Create custom data columns</li>
+                        <li>Examples: Permit Number, Safety Classification, Weather Dependency</li>
+                    </ul>
+                </div>
+                
+                <h3>Project Templates</h3>
+                <p>For repetitive project types (well drilling, pipeline segments), create templates to accelerate setup:</p>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Build Template Project:</strong> Create fully configured project with standard WBS, activities, logic, and resources</p>
+                    <p><span class="step-number">2</span><strong>Save as Template:</strong> Set project status to "What-If" to preserve as reference</p>
+                    <p><span class="step-number">3</span><strong>Copy for New Projects:</strong> Right-click template → Copy → Paste under target EPS node</p>
+                    <p><span class="step-number">4</span><strong>Modify Specifics:</strong> Update project ID, dates, resource assignments for new scope</p>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Best Practice:</strong> For oil & gas, maintain separate templates for: Offshore Platform, Onshore Facility, Pipeline, Drilling Campaign, and Turnaround projects.
+                </div>
+                
+                <div class="warning">
+                    <strong>⚠️ Critical Setup Rule:</strong> NEVER start adding activities before defining: (1) Project calendars, (2) WBS structure, (3) Activity codes, (4) Resource library. Retrofitting these after thousands of activities exist causes major rework.
+                </div>
+                
+                <h3>Quality Checklist for New Projects</h3>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Verified</th>
+                    </tr>
+                    <tr>
+                        <td>Project ID follows naming convention</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Planned dates align with contract milestones</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Appropriate calendar assigned</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Activity codes configured for reporting</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>WBS matches work package structure</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Resources available in project</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Calculation settings reviewed</td>
+                        <td>☐</td>
+                    </tr>
+                    <tr>
+                        <td>Security/access rights assigned</td>
+                        <td>☐</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="calendars" class="section">
+                <h2>Calendar Configuration Guide</h2>
+                
+                <h3>Understanding P6 Calendars</h3>
+                <p>Calendars define when work can be performed. P6 uses calendars to calculate activity dates, durations, and resource availability. Proper calendar setup is critical for realistic oil & gas scheduling.</p>
+                
+                <h3>Calendar Types</h3>
+                <table>
+                    <tr>
+                        <th>Calendar Type</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Global Calendar</td>
+                        <td>Enterprise-wide, reusable across all projects</td>
+                        <td>Standard 5-day week, Offshore 7-day continuous</td>
+                    </tr>
+                    <tr>
+                        <td>Project Calendar</td>
+                        <td>Specific to one project, inherits from global</td>
+                        <td>Project with unique shutdown periods</td>
+                    </tr>
+                    <tr>
+                        <td>Resource Calendar</td>
+                        <td>Individual resource availability</td>
+                        <td>Specialist on rotation schedule</td>
+                    </tr>
+                </table>
+                
+                <h3>Creating Global Calendars (Admin)</h3>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Access Calendar Manager:</strong></p>
+                    <ul>
+                        <li>Enterprise → Calendars</li>
+                        <li>Or Admin → Calendars for administrative view</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Create New Calendar:</strong></p>
+                    <ul>
+                        <li>Click Add button</li>
+                        <li>Enter Calendar Name (e.g., "Offshore 24/7 Continuous")</li>
+                        <li>Select Type: Global or Project</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>Define Standard Workweek:</strong></p>
+                    <ul>
+                        <li>Click Workweek tab</li>
+                        <li>For each day (Mon-Sun), set work hours:
+                            <ul>
+                                <li>Working day: Check box, enter start/end times (e.g., 08:00-17:00)</li>
+                                <li>Non-working day: Uncheck box</li>
+                            </ul>
+                        </li>
+                        <li>Define break times if needed (lunch breaks typically excluded)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Add Exceptions (Holidays/Shutdowns):</strong></p>
+                    <ul>
+                        <li>Click Exceptions tab</li>
+                        <li>Click Add button</li>
+                        <li>Enter exception date and description</li>
+                        <li>Set as non-working or define special hours</li>
+                        <li>Repeat for all company holidays, maintenance windows</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Calculate Work Hours Per Time Period:</strong></p>
+                    <ul>
+                        <li>P6 auto-calculates hours per day, week, month, year</li>
+                        <li>Review in Calendar details to verify accuracy</li>
+                        <li>Critical for duration calculations</li>
+                    </ul>
+                </div>
+                
+                <h3>Standard Oil & Gas Calendar Configurations</h3>
+                
+                <div class="step-box">
+                    <h3>Offshore Continuous Operations</h3>
+                    <p><strong>Use Case:</strong> Platform construction, subsea installation, marine operations</p>
+                    <ul>
+                        <li><strong>Workweek:</strong> Monday-Sunday, all days working</li>
+                        <li><strong>Hours:</strong> 24 hours per day (00:00-24:00)</li>
+                        <li><strong>Work Hours/Day:</strong> 24</li>
+                        <li><strong>Exceptions:</strong> Severe weather downtime windows (if predictable)</li>
+                        <li><strong>Notes:</strong> Use for activities that run round-the-clock with crew rotations</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Onshore 6-Day Operations</h3>
+                    <p><strong>Use Case:</strong> Pipeline construction, field development, fabrication yards</p>
+                    <ul>
+                        <li><strong>Workweek:</strong> Monday-Saturday working, Sunday off</li>
+                        <li><strong>Hours:</strong> 07:00-17:00 (10-hour days typical)</li>
+                        <li><strong>Work Hours/Day:</strong> 10</li>
+                        <li><strong>Exceptions:</strong> Public holidays, prayer days (Middle East)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Engineering 5-Day Office Calendar</h3>
+                    <p><strong>Use Case:</strong> Design work, procurement, project management</p>
+                    <ul>
+                        <li><strong>Workweek:</strong> Monday-Friday working, Sat-Sun off</li>
+                        <li><strong>Hours:</strong> 08:00-17:00 with 1-hour lunch (8 working hours)</li>
+                        <li><strong>Work Hours/Day:</strong> 8</li>
+                        <li><strong>Exceptions:</strong> National holidays, year-end shutdown</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Turnaround/Shutdown Calendar</h3>
+                    <p><strong>Use Case:</strong> Refinery maintenance, plant turnarounds</p>
+                    <ul>
+                        <li><strong>Workweek:</strong> Monday-Sunday, all days working</li>
+                        <li><strong>Hours:</strong> 12-hour shifts (06:00-18:00 day shift, 18:00-06:00 night shift)</li>
+                        <li><strong>Work Hours/Day:</strong> 24 (two 12-hour shifts)</li>
+                        <li><strong>Duration:</strong> Temporary calendar for shutdown period only</li>
+                    </ul>
+                </div>
+                
+                <h3>Crew Rotation Calendars</h3>
+                <p>Oil & gas offshore operations use rotation schedules. Model these in P6:</p>
+                
+                <div class="step-box">
+                    <h3>14/14 Rotation (Equal Time)</h3>
+                    <p>Crew works 14 days on, 14 days off</p>
+                    <ul>
+                        <li>Create two resource calendars: Crew A and Crew B</li>
+                        <li>Crew A: Days 1-14 working (24hrs), Days 15-28 non-working</li>
+                        <li>Crew B: Days 1-14 non-working, Days 15-28 working (24hrs)</li>
+                        <li>Pattern repeats every 28 days</li>
+                        <li>Assign half the resources to each calendar for continuous coverage</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>28/28 Rotation</h3>
+                    <p>Crew works 28 days on, 28 days off (common for remote locations)</p>
+                    <ul>
+                        <li>Create Crew A and Crew B calendars</li>
+                        <li>56-day repeating pattern</li>
+                        <li>Ensures continuous operations with crew overlap during changeover</li>
+                    </ul>
+                </div>
+                
+                <h3>Assigning Calendars</h3>
+                
+                <div class="step-box">
+                    <h3>Project-Level Assignment</h3>
+                    <ul>
+                        <li>Open project: File → Open</li>
+                        <li>Project → Project Details → Dates tab</li>
+                        <li>Select Default Calendar from dropdown</li>
+                        <li>All new activities inherit this calendar unless overridden</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Activity-Level Override</h3>
+                    <ul>
+                        <li>Select activity in Activities view</li>
+                        <li>In General tab or Activity Details window</li>
+                        <li>Change Calendar field to different calendar</li>
+                        <li>Example: Engineering activities use 5-day, construction uses 7-day</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Resource-Level Calendar</h3>
+                    <ul>
+                        <li>Enterprise → Resources</li>
+                        <li>Select resource → General tab</li>
+                        <li>Assign calendar to resource</li>
+                        <li>When resource assigned to activity, P6 considers resource calendar for availability</li>
+                    </ul>
+                </div>
+                
+                <h3>Calendar Hierarchy and Precedence</h3>
+                <p>When multiple calendars apply, P6 follows this logic:</p>
+                <ol>
+                    <li><strong>Resource Calendar:</strong> If resource has calendar, it determines when resource can work</li>
+                    <li><strong>Activity Calendar:</strong> Determines when activity can progress</li>
+                    <li><strong>Project Calendar:</strong> Default if no activity calendar assigned</li>
+                    <li><strong>Result:</strong> Activity can only progress when BOTH activity calendar AND all assigned resource calendars show working time</li>
+                </ol>
+                
+                <div class="warning">
+                    <strong>⚠️ Common Mistake:</strong> Assigning 24/7 calendar to offshore activities but forgetting to also assign 24/7 calendar to offshore resources. Result: Activities calculate as 8-hour days despite calendar showing 24 hours!
+                </div>
+                
+                <h3>Weather Windows and Seasonal Calendars</h3>
+                <p>For marine operations sensitive to weather (heavy lifts, subsea installation):</p>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Create Seasonal Calendar:</strong></p>
+                    <ul>
+                        <li>Base calendar: Offshore 24/7</li>
+                        <li>Add exceptions for monsoon/winter months when operations impossible</li>
+                        <li>Example: North Sea - November to March limited weather windows</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Apply to Weather-Sensitive Activities:</strong></p>
+                    <ul>
+                        <li>Assign seasonal calendar only to critical lifts, topsides installation, piling</li>
+                        <li>Regular activities continue on standard 24/7 calendar</li>
+                    </ul>
+                </div>
+                
+                <h3>Calendar Maintenance Best Practices</h3>
+                
+                <div class="tip">
+                    <strong>💡 Annual Review:</strong> Update global calendars each year with:
+                    <ul>
+                        <li>New public holidays (governments announce annually)</li>
+                        <li>Planned plant shutdown dates</li>
+                        <li>Major religious observances (Islamic calendar shifts yearly)</li>
+                        <li>Known project-specific constraints</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Naming Convention:</strong> Use descriptive, standardized names:
+                    <ul>
+                        <li>Good: "OFFSHORE-24x7-CONTINUOUS"</li>
+                        <li>Good: "ONSHORE-6DAY-10HR"</li>
+                        <li>Good: "ENGINEERING-5DAY-OFFICE"</li>
+                        <li>Bad: "Calendar1", "NewCal", "Test"</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <strong>⚠️ Critical:</strong> Never delete calendars still assigned to activities or resources. This corrupts project data. Instead, rename with "OBSOLETE-" prefix and create replacement calendar.
+                </div>
+                
+                <h3>Troubleshooting Calendar Issues</h3>
+                
+                <table>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Cause</th>
+                        <th>Solution</th>
+                    </tr>
+                    <tr>
+                        <td>Activity duration calculating incorrectly</td>
+                        <td>Wrong calendar assigned</td>
+                        <td>Check activity calendar, verify work hours/day setting</td>
+                    </tr>
+                    <tr>
+                        <td>Schedule spans weekends unexpectedly</td>
+                        <td>7-day calendar when 5-day intended</td>
+                        <td>Verify project default calendar, update if needed</td>
+                    </tr>
+                    <tr>
+                        <td>Resources showing overallocated on holidays</td>
+                        <td>Resource calendar missing exceptions</td>
+                        <td>Add holidays to resource calendar</td>
+                    </tr>
+                    <tr>
+                        <td>Offshore activities calculating as 8hr days</td>
+                        <td>Resources use office calendar</td>
+                        <td>Create 24hr resource calendar, assign to offshore crew</td>
+                    </tr>
+                </table>
+                
+                <h3>Advanced: Multiple Shift Calendars</h3>
+                <p>For projects with day/night shifts tracking separately:</p>
+                
+                <div class="step-box">
+                    <ul>
+                        <li>Create "DAY-SHIFT-12HR" calendar: 06:00-18:00</li>
+                        <li>Create "NIGHT-SHIFT-12HR" calendar: 18:00-06:00</li>
+                        <li>Assign to activities based on shift performing work</li>
+                        <li>Or assign to resources representing shift crews</li>
+                        <li>Enables tracking productivity differences between shifts</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="step-by-step" class="section">
+                <h2>Step-by-Step Implementation Guide</h2>
+                
+                <h3>Phase 1: Installation & Configuration</h3>
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Install P6 Client:</strong> Run installer as administrator, select typical installation, configure database connection settings.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Database Setup:</strong> Connect to enterprise database or configure local SQLite for standalone mode.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>User Configuration:</strong> Set up user profiles, security access levels, and global preferences.</p>
+                </div>
+                
+                <h3>Phase 2: Project Creation</h3>
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Create Enterprise Project Structure (EPS):</strong> Navigate to Enterprise → EPS, right-click to add new node, define hierarchy for oil & gas portfolio.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Define New Project:</strong> File → New → Project, enter project details (ID, name, dates), assign to EPS node.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">6</span><strong>Set Calendars:</strong> Admin → Calendars, create global and project-specific calendars accounting for offshore rotation schedules.</p>
+                </div>
+                
+                <h3>Phase 3: Work Breakdown Structure</h3>
+                <div class="step-box">
+                    <p><span class="step-number">7</span><strong>Build WBS:</strong> Open project, navigate to WBS tab, create hierarchical structure matching discipline breakdown (Drilling, Pipeline, Facilities, etc.).</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">8</span><strong>Assign WBS Codes:</strong> Use industry-standard coding (e.g., 1.1.1 for Drilling → Offshore → Platform A).</p>
+                </div>
+                
+                <h3>Phase 4: Activity Development</h3>
+                <div class="step-box">
+                    <p><span class="step-number">9</span><strong>Add Activities:</strong> Switch to Activities view, click Add button, enter activity ID, name, duration, and assign to WBS element.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">10</span><strong>Define Relationships:</strong> Select predecessor activity, drag to successor, choose relationship type (FS, SS, FF, SF) and add lag if needed.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">11</span><strong>Assign Resources:</strong> In Resource tab, assign labor, equipment, and materials to activities with planned units and rates.</p>
+                </div>
+                
+                <h3>Phase 5: Scheduling & Analysis</h3>
+                <div class="step-box">
+                    <p><span class="step-number">12</span><strong>Schedule Project:</strong> Tools → Schedule, review critical path, total float, and constraints.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">13</span><strong>Resource Level:</strong> Tools → Level Resources to resolve overallocations and optimize crew assignments.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">14</span><strong>Create Baseline:</strong> Tools → Maintain Baselines → Add to preserve current plan for variance analysis.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>⚠️ Warning:</strong> Always create a baseline before project execution begins. This is critical for measuring progress and reporting delays in oil & gas operations.
+                </div>
+            </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera P6 2026 Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            padding: 1%;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0f2557 0%, #1e3c72 100%);
+            color: white;
+            padding: 12px 1%;
+            text-align: center;
+            border-bottom: 3px solid #ff6b35;
+            flex-shrink: 0;
+        }
+        
+        .header h1 {
+            font-size: 16px;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 9px;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            overflow-x: auto;
+            border-bottom: 2px solid #ddd;
+            flex-shrink: 0;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .tabs::-webkit-scrollbar {
+            height: 3px;
+        }
+        
+        .tabs::-webkit-scrollbar-thumb {
+            background: #1e3c72;
+            border-radius: 3px;
+        }
+        
+        .tab {
+            padding: 8px 12px;
+            font-size: 10px;
+            background: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-weight: 500;
+            min-width: fit-content;
+        }
+        
+        .tab.active {
+            background: white;
+            color: #1e3c72;
+            border-bottom: 2px solid #ff6b35;
+        }
+        
+        .content {
+            padding: 1%;
+            overflow-y: auto;
+            flex: 1;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.4s;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            font-size: 13px;
+            color: #0f2557;
+            margin: 12px 0 6px 0;
+            padding-bottom: 3px;
+            border-bottom: 2px solid #ff6b35;
+        }
+        
+        h3 {
+            font-size: 11px;
+            color: #1e3c72;
+            margin: 10px 0 4px 0;
+            font-weight: 600;
+        }
+        
+        p, li {
+            font-size: 9px;
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 15px;
+        }
+        
+        .step-box {
+            background: #f8f9fa;
+            border-left: 3px solid #ff6b35;
+            padding: 6px;
+            margin: 6px 0;
+            border-radius: 3px;
+        }
+        
+        .step-number {
+            background: #1e3c72;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        
+        .tip {
+            background: #e3f2fd;
+            border-left: 3px solid #2196f3;
+            padding: 6px;
+            margin: 6px 0;
+            font-size: 9px;
+            border-radius: 3px;
+        }
+        
+        .warning {
+            background: #fff3e0;
+            border-left: 3px solid #ff9800;
+            padding: 6px;
+            margin: 6px 0;
+            font-size: 9px;
+            border-radius: 3px;
+        }
+        
+        .skill-level {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 8px;
+            font-weight: bold;
+            margin: 3px 3px 3px 0;
+        }
+        
+        .beginner {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .intermediate {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .advanced {
+            background: #f44336;
+            color: white;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: 9px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 4px;
+            text-align: left;
+        }
+        
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 8px 1%;
+            text-align: center;
+            font-size: 8px;
+            color: #666;
+            border-top: 2px solid #ddd;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Primavera P6 2026 Professional Guide</h1>
+            <p>Industry Standard for Oil & Gas Project Scheduling</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('getting-started')">Getting Started</button>
+            <button class="tab" onclick="showSection('installation')">Installation</button>
+            <button class="tab" onclick="showSection('ui-navigation')">UI Navigation</button>
+            <button class="tab" onclick="showSection('project-creation')">Project Setup</button>
+            <button class="tab" onclick="showSection('calendars')">Calendars</button>
+            <button class="tab" onclick="showSection('step-by-step')">Step-by-Step</button>
+            <button class="tab" onclick="showSection('skills')">Skills Guide</button>
+            <button class="tab" onclick="showSection('beginners')">Beginners</button>
+            <button class="tab" onclick="showSection('oilgas')">Oil & Gas</button>
+            <button class="tab" onclick="showSection('shortcuts')">Shortcuts</button>
+        </div>
+        
+        <div class="content">
+            <div id="getting-started" class="section active">
+                <h2>Introduction to Primavera P6</h2>
+                <p>Primavera P6 Professional Project Management (P6 PPM) is the industry-leading project portfolio management solution for planning, managing, and executing projects across oil & gas, construction, and engineering sectors.</p>
+                
+                <h3>What is Primavera P6?</h3>
+                <p>P6 is an enterprise project portfolio management software that enables organizations to plan, schedule, and control large-scale programs and individual projects. It provides robust scheduling, resource management, and reporting capabilities essential for complex oil & gas operations.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Multi-project scheduling and resource optimization</li>
+                    <li>Critical Path Method (CPM) scheduling</li>
+                    <li>Earned Value Management (EVM)</li>
+                    <li>Risk analysis and management</li>
+                    <li>Global resource assignment and leveling</li>
+                    <li>Advanced reporting and dashboards</li>
+                    <li>Integration with cost control systems</li>
+                    <li>What-if scenario planning</li>
+                </ul>
+                
+                <h3>System Requirements 2026</h3>
+                <div class="step-box">
+                    <p><strong>Minimum:</strong> Windows 10/11, 8GB RAM, 10GB disk space, 1280x1024 resolution</p>
+                    <p><strong>Recommended:</strong> Windows 11, 16GB RAM, SSD storage, dual monitors</p>
+                    <p><strong>Database:</strong> Oracle 19c or MS SQL Server 2019+</p>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Tip:</strong> For oil & gas projects with 10,000+ activities, use 32GB RAM and enterprise-grade database configuration for optimal performance.
+                </div>
+            </div>
+            
+            <div id="step-by-step" class="section">
+                <h2>Step-by-Step Implementation Guide</h2>
+                
+                <h3>Phase 1: Installation & Configuration</h3>
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Install P6 Client:</strong> Run installer as administrator, select typical installation, configure database connection settings.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Database Setup:</strong> Connect to enterprise database or configure local SQLite for standalone mode.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>User Configuration:</strong> Set up user profiles, security access levels, and global preferences.</p>
+                </div>
+                
+                <h3>Phase 2: Project Creation</h3>
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Create Enterprise Project Structure (EPS):</strong> Navigate to Enterprise → EPS, right-click to add new node, define hierarchy for oil & gas portfolio.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Define New Project:</strong> File → New → Project, enter project details (ID, name, dates), assign to EPS node.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">6</span><strong>Set Calendars:</strong> Admin → Calendars, create global and project-specific calendars accounting for offshore rotation schedules.</p>
+                </div>
+                
+                <h3>Phase 3: Work Breakdown Structure</h3>
+                <div class="step-box">
+                    <p><span class="step-number">7</span><strong>Build WBS:</strong> Open project, navigate to WBS tab, create hierarchical structure matching discipline breakdown (Drilling, Pipeline, Facilities, etc.).</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">8</span><strong>Assign WBS Codes:</strong> Use industry-standard coding (e.g., 1.1.1 for Drilling → Offshore → Platform A).</p>
+                </div>
+                
+                <h3>Phase 4: Activity Development</h3>
+                <div class="step-box">
+                    <p><span class="step-number">9</span><strong>Add Activities:</strong> Switch to Activities view, click Add button, enter activity ID, name, duration, and assign to WBS element.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">10</span><strong>Define Relationships:</strong> Select predecessor activity, drag to successor, choose relationship type (FS, SS, FF, SF) and add lag if needed.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">11</span><strong>Assign Resources:</strong> In Resource tab, assign labor, equipment, and materials to activities with planned units and rates.</p>
+                </div>
+                
+                <h3>Phase 5: Scheduling & Analysis</h3>
+                <div class="step-box">
+                    <p><span class="step-number">12</span><strong>Schedule Project:</strong> Tools → Schedule, review critical path, total float, and constraints.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">13</span><strong>Resource Level:</strong> Tools → Level Resources to resolve overallocations and optimize crew assignments.</p>
+                </div>
+                <div class="step-box">
+                    <p><span class="step-number">14</span><strong>Create Baseline:</strong> Tools → Maintain Baselines → Add to preserve current plan for variance analysis.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>⚠️ Warning:</strong> Always create a baseline before project execution begins. This is critical for measuring progress and reporting delays in oil & gas operations.
+                </div>
+            </div>
+            
+            <div id="skills" class="section">
+                <h2>Essential Skills Development</h2>
+                
+                <h3>Core Competencies</h3>
+                
+                <div class="step-box">
+                    <h3><span class="skill-level beginner">BEGINNER</span> Foundation Skills</h3>
+                    <ul>
+                        <li>Navigation: Understanding interface layout, toolbars, and view customization</li>
+                        <li>Project Setup: Creating projects, WBS development, basic calendar configuration</li>
+                        <li>Activity Management: Adding, editing, deleting activities and setting durations</li>
+                        <li>Basic Relationships: Creating Finish-to-Start dependencies</li>
+                        <li>Scheduling: Running schedule calculations and identifying critical path</li>
+                        <li>Filtering & Grouping: Basic data organization and views</li>
+                        <li>Reporting: Generating standard activity and Gantt chart reports</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3><span class="skill-level intermediate">INTERMEDIATE</span> Advanced Operations</h3>
+                    <ul>
+                        <li>Resource Management: Creating resource library, assigning multiple resources, defining rates and curves</li>
+                        <li>Advanced Relationships: Using SS, FF, SF relationships with leads and lags</li>
+                        <li>Constraints: Applying mandatory dates, expected finish constraints for permit dependencies</li>
+                        <li>Activity Codes: Creating and applying multi-level coding structures for reporting</li>
+                        <li>Baseline Management: Creating, comparing, and maintaining multiple baselines</li>
+                        <li>Progress Updates: Recording actual dates, remaining durations, and percent complete</li>
+                        <li>Resource Leveling: Resolving conflicts and optimizing resource allocation</li>
+                        <li>User-Defined Fields: Creating custom data columns for tracking KPIs</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3><span class="skill-level advanced">ADVANCED</span> Expert Techniques</h3>
+                    <ul>
+                        <li>Global Change: Mass updates across thousands of activities using filters and logic</li>
+                        <li>Risk Analysis: Integration with Pertmaster for Monte Carlo simulation</li>
+                        <li>Earned Value: Configuring EVM metrics, performance indices, and variance analysis</li>
+                        <li>Multi-Project Management: Cross-project dependencies and resource sharing</li>
+                        <li>API & Integration: Connecting P6 with SAP, Oracle, or custom systems via EPPM Web Services</li>
+                        <li>Database Administration: Performance tuning, backup strategies, user security models</li>
+                        <li>Custom Reporting: Building complex layouts with advanced filters and formulas</li>
+                        <li>Portfolio Analytics: Using Business Intelligence tools for executive dashboards</li>
+                    </ul>
+                </div>
+                
+                <h3>Learning Path Timeline</h3>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Duration</th>
+                        <th>Focus Areas</th>
+                    </tr>
+                    <tr>
+                        <td>Beginner</td>
+                        <td>2-4 weeks</td>
+                        <td>Interface, basic scheduling, simple projects</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>2-3 months</td>
+                        <td>Resources, baselines, progress tracking</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced</td>
+                        <td>6-12 months</td>
+                        <td>Enterprise management, integration, optimization</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="beginners" class="section">
+                <h2>Beginner's Quick Start Guide</h2>
+                
+                <h3>Your First Project in 30 Minutes</h3>
+                
+                <div class="step-box">
+                    <p><span class="step-number">1</span><strong>Launch P6:</strong> Open Primavera P6 application, login with credentials provided by administrator.</p>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">2</span><strong>Create Project:</strong></p>
+                    <ul>
+                        <li>Go to File → New → Project</li>
+                        <li>Enter Project ID (e.g., "OG-2026-001")</li>
+                        <li>Project Name: "Offshore Platform Installation"</li>
+                        <li>Set Planned Start Date</li>
+                        <li>Click "OK"</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">3</span><strong>Build Simple WBS:</strong></p>
+                    <ul>
+                        <li>Click WBS tab at bottom</li>
+                        <li>Right-click project name → Add</li>
+                        <li>Create phases: Engineering, Procurement, Construction, Commissioning</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">4</span><strong>Add Activities:</strong></p>
+                    <ul>
+                        <li>Click Activities tab</li>
+                        <li>Select WBS node (e.g., Engineering)</li>
+                        <li>Click Add button in toolbar</li>
+                        <li>Enter Activity ID: "ENG-001"</li>
+                        <li>Activity Name: "Design Review"</li>
+                        <li>Duration: 10 days</li>
+                        <li>Repeat for 5-10 activities</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">5</span><strong>Link Activities:</strong></p>
+                    <ul>
+                        <li>Select first activity</li>
+                        <li>Hold mouse on activity bar, drag to next activity</li>
+                        <li>Release to create Finish-to-Start link</li>
+                        <li>Continue linking all activities in logical sequence</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <p><span class="step-number">6</span><strong>Schedule:</strong></p>
+                    <ul>
+                        <li>Click Tools → Schedule</li>
+                        <li>Review Log for errors</li>
+                        <li>View Gantt chart - critical path shows in red</li>
+                    </ul>
+                </div>
+                
+                <h3>Understanding the Interface</h3>
+                <p><strong>Top Toolbar:</strong> Quick access to New, Open, Save, Print, Schedule functions</p>
+                <p><strong>Directory Panel (Left):</strong> Navigate EPS, Projects, WBS structure</p>
+                <p><strong>Bottom Tabs:</strong> Switch between WBS, Activities, Resources, Assignments</p>
+                <p><strong>Main View (Center):</strong> Activity table with columns like ID, Name, Duration, Dates</p>
+                <p><strong>Gantt Chart (Right):</strong> Visual timeline showing activity bars and dependencies</p>
+                
+                <h3>Common Beginner Mistakes to Avoid</h3>
+                <div class="warning">
+                    <strong>⚠️ Missing Relationships:</strong> Every activity (except first and last) should have at least one predecessor and successor. Orphan activities create unrealistic schedules.
+                </div>
+                <div class="warning">
+                    <strong>⚠️ Forgetting to Schedule:</strong> Changes don't calculate dates until you run Schedule (F9). Always schedule after modifications.
+                </div>
+                <div class="warning">
+                    <strong>⚠️ No Baseline:</strong> Create baseline before tracking progress. You can't measure variance without it.
+                </div>
+                <div class="warning">
+                    <strong>⚠️ Over-constraining:</strong> Use constraints sparingly. Let logic drive the schedule, not forced dates.
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Pro Tip:</strong> Use Ctrl+Z to undo mistakes. P6 remembers multiple undo steps, so experiment freely.
+                </div>
+            </div>
+            
+            <div id="oilgas" class="section">
+                <h2>Oil & Gas Industry Applications</h2>
+                
+                <h3>Why P6 is Essential for Oil & Gas</h3>
+                <p>The oil & gas sector requires precise scheduling due to high costs, regulatory compliance, harsh environments, and complex multi-phase operations. P6 provides the control needed for upstream, midstream, and downstream projects.</p>
+                
+                <h3>Typical Oil & Gas Project Types</h3>
+                <ul>
+                    <li><strong>Upstream:</strong> Exploration, drilling, offshore platform construction, subsea installations</li>
+                    <li><strong>Midstream:</strong> Pipeline construction, compression stations, storage facilities</li>
+                    <li><strong>Downstream:</strong> Refinery turnarounds, petrochemical plants, terminal expansions</li>
+                    <li><strong>LNG:</strong> Liquefaction plants, regasification terminals, FLNG vessels</li>
+                </ul>
+                
+                <h3>Industry-Specific P6 Configuration</h3>
+                
+                <div class="step-box">
+                    <h3>Calendar Setup for Offshore Operations</h3>
+                    <ul>
+                        <li>Create 24/7 continuous work calendar for offshore installations</li>
+                        <li>Define rotation schedules (14/14, 28/28 patterns) for crew changes</li>
+                        <li>Account for weather windows for critical lifts and hookup operations</li>
+                        <li>Set up onshore 5/2 or 6/1 work weeks for engineering and procurement</li>
+                        <li>Configure global exceptions for regulatory shutdowns and maintenance windows</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>WBS Structure for Offshore Platform Project</h3>
+                    <p>Typical hierarchy aligns with discipline and construction workface:</p>
+                    <ul>
+                        <li>1.0 Engineering (FEED, Detailed Design, Procurement Support)</li>
+                        <li>2.0 Procurement (Long-lead Equipment, Bulk Materials, Subsea Systems)</li>
+                        <li>3.0 Fabrication (Topsides Modules, Jacket Structure, Piles)</li>
+                        <li>4.0 Installation (Jacket Launch, Topsides Lift, Piling, Hookup)</li>
+                        <li>5.0 Commissioning (Pre-commissioning, MC, Performance Testing)</li>
+                        <li>6.0 Startup (First Oil, Handover, Demobilization)</li>
+                    </ul>
+                </div>
+                
+                <h3>Critical Resource Management</h3>
+                <table>
+                    <tr>
+                        <th>Resource Type</th>
+                        <th>P6 Configuration</th>
+                        <th>Oil & Gas Consideration</th>
+                    </tr>
+                    <tr>
+                        <td>Specialized Labor</td>
+                        <td>Create roles with certifications</td>
+                        <td>Welders (6G certified), NDT inspectors, ROV pilots</td>
+                    </tr>
+                    <tr>
+                        <td>Marine Equipment</td>
+                        <td>Non-consumable material</td>
+                        <td>Heavy lift vessels, derrick barges, supply boats</td>
+                    </tr>
+                    <tr>
+                        <td>Long-lead Items</td>
+                        <td>Milestones with constraints</td>
+                        <td>Compressors, turbines (12-18 month delivery)</td>
+                    </tr>
+                    <tr>
+                        <td>Weather Windows</td>
+                        <td>Calendar exceptions</td>
+                        <td>Monsoon season, ice-free periods, typhoon risk</td>
+                    </tr>
+                </table>
+                
+                <h3>Activity Coding for O&G Projects</h3>
+                <p>Implement multi-dimensional codes for powerful reporting:</p>
+                <ul>
+                    <li><strong>Discipline Code:</strong> CIVIL, STRUC, MECH, ELEC, INST, PIPE, HVAC</li>
+                    <li><strong>Area Code:</strong> Drilling Module, Wellhead Platform, Flare Tower, Quarters</li>
+                    <li><strong>Phase Code:</strong> Engineering, Procurement, Fabrication, Installation, Commissioning</li>
+                    <li><strong>Contract Package:</strong> EPC-01, FabYard-A, InstallVessel-B</li>
+                    <li><strong>Safety Critical:</strong> Hot Work, Confined Space, Lifting Operations</li>
+                    <li><strong>HSE Category:</strong> Permit to Work (PTW) types for regulatory tracking</li>
+                </ul>
+                
+                <h3>Earned Value for Capital Projects</h3>
+                <p>Configure P6 for rigorous EVM analysis required by operators and lenders:</p>
+                <div class="step-box">
+                    <ul>
+                        <li>Define Activity Types with Performance % Complete methods</li>
+                        <li>Assign budget (BCWS) at activity or resource level matching cost accounts</li>
+                        <li>Track actuals through timesheet integration or manual entry</li>
+                        <li>Monitor SPI and CPI trends for early warning of overruns</li>
+                        <li>Generate S-curves comparing planned vs. actual expenditure</li>
+                        <li>Calculate EAC (Estimate at Completion) for forecast reporting to stakeholders</li>
+                    </ul>
+                </div>
+                
+                <h3>Turnaround & Shutdown Scheduling</h3>
+                <p>Refinery turnarounds demand intense P6 capabilities due to tight timeframes and high daily costs:</p>
+                <div class="step-box">
+                    <ul>
+                        <li>Create detailed 24-hour shift schedules with handover protocols</li>
+                        <li>Use minute-level durations for critical path analysis (e.g., 480 minutes vs 1 day)</li>
+                        <li>Model permit-to-work dependencies as constraints between activities</li>
+                        <li>Track scaffolding erection/dismantling as constraining resource</li>
+                        <li>Implement daily look-ahead schedules with actual vs. plan variance tracking</li>
+                        <li>Use what-if scenarios to model contingency plans for discovered defects</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Best Practice:</strong> For mega-projects ($1B+), maintain separate P6 databases for Engineering, Procurement, and Construction with cross-project links. This prevents performance degradation and allows discipline-specific scheduling depth.
+                </div>
+            </div>
+            
+            <div id="shortcuts" class="section">
+                <h2>Keyboard Shortcuts & Quick Tips</h2>
+                
+                <h3>Essential Keyboard Shortcuts</h3>
+                <table>
+                    <tr>
+                        <th>Shortcut</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>F9</td>
+                        <td>Schedule project</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + N</td>
+                        <td>New activity</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + S</td>
+                        <td>Save project</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + Z</td>
+                        <td>Undo</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + Y</td>
+                        <td>Redo</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + F</td>
+                        <td>Find activity</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + D</td>
+                        <td>Delete selected</td>
+                    </tr>
+                    <tr>
+                        <td>F5</td>
+                        <td>Refresh view</td>
+                    </tr>
+                    <tr>
+                        <td>F3</td>
+                        <td>Apply filter</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + G</td>
+                        <td>Go to date</td>
+                    </tr>
+                    <tr>
+                        <td>Alt + F4</td>
+                        <td>Close P6</td>
+                    </tr>
+                </table>
+                
+                <h3>Power User Techniques</h3>
+                <div class="step-box">
+                    <p><strong>Global Change:</strong> Select multiple activities, right-click → Global Change to mass-update fields like calendar, activity type, or custom codes across thousands of tasks.</p>
+                </div>
+                <div class="step-box">
+                    <p><strong>Column Auto-fit:</strong> Double-click column divider to auto-size based on content width.</p>
+                </div>
+                <div class="step-box">
+                    <p><strong>Multi-select:</strong> Hold Ctrl and click individual activities, or hold Shift and click for range selection.</p>
+                </div>
+                <div class="step-box">
+                    <p><strong>Quick Filter:</strong> Click column header → Auto Filter to see unique values and filter instantly.</p>
+                </div>
+                <div class="step-box">
+                    <p><strong>Copy Activities:</strong> Ctrl+C and Ctrl+V works across projects for duplicating WBS structures.</p>
+                </div>
+                
+                <h3>Productivity Tips</h3>
+                <ul>
+                    <li>Customize toolbar to add frequently-used functions like Schedule, Baseline, and Global Change</li>
+                    <li>Save custom layouts for different reporting needs (Executive Summary vs. Detailed Construction)</li>
+                    <li>Use Project Codes to quickly switch between related projects in portfolio</li>
+                    <li>Set up User Preferences for default durations, relationship types, and activity IDs</li>
+                    <li>Create reusable templates for repetitive project types (well drilling, pipeline segments)</li>
+                    <li>Export to Excel for offline analysis, then import updates back to P6</li>
+                    <li>Use Trace Logic to understand why activities are scheduled on specific dates</li>
+                </ul>
+                
+                <h3>Common Issues & Solutions</h3>
+                <table>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Solution</th>
+                    </tr>
+                    <tr>
+                        <td>Schedule won't calculate</td>
+                        <td>Check for circular logic, missing relationships, or constraint conflicts</td>
+                    </tr>
+                    <tr>
+                        <td>Critical path incorrect</td>
+                        <td>Verify all activities have proper successors and float calculations are enabled</td>
+                    </tr>
+                    <tr>
+                        <td>Resources over-allocated</td>
+                        <td>Run resource leveling or adjust activity scheduling to spread workload</td>
+                    </tr>
+                    <tr>
+                        <td>Performance slow</td>
+                        <td>Archive completed projects, optimize database, reduce visible activities with filters</td>
+                    </tr>
+                    <tr>
+                        <td>Can't update progress</td>
+                        <td>Check user permissions and ensure project isn't locked or read-only</td>
+                    </tr>
+                </table>
+                
+                <div class="tip">
+                    <strong>💡 Time Saver:</strong> Create keyboard shortcuts for your most-used functions in Edit → User Preferences → Keyboard Shortcuts for lightning-fast scheduling updates.
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Primavera P6 Professional Guide | Oil & Gas Industry Standard | Version 24.12</p>
+            <p>For official documentation visit: oracle.com/primavera</p>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Scroll clicked tab into view
+            event.target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            
+            // Scroll to top of content
+            document.querySelector('.content').scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
